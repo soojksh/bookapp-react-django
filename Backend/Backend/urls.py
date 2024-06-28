@@ -20,9 +20,9 @@ from book import views
 from rest_framework import routers
 
 router = routers.DefaultRouter()
-# router.register(r'books', views.BookView, 'book')
+router.register(r'books', views.BookView, 'book')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('api/', include(router.urls)),
+    path('api/', include(router.urls)),
 ]
